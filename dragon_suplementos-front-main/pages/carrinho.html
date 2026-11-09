@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imgs/logo2.png">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav>
+
+            <a class="logo" href="../index.html">
+                <img src="../imgs/logo2.png" alt="Dragon Suplementos">
+            </a>
+
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+
+                <li>
+                    <a href="produtos.html" title="Produtos">
+                        <img src="../imgs/product.svg" alt="Produtos">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login-cadastro.html" title="Cadastro">
+                        <img src="../imgs/person-fill.svg" alt="Cadastro">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carrinho.html" title="Carrinho">
+                        <img src="../imgs/cart4.svg" alt="Carrinho">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin.html" title="Admin">
+                        <img src="../imgs/shield-fill.svg" alt="Admin">
+                    </a>
+                </li>
+
+                <button
+                    class="theme-button"
+                    id="themeButton"
+                    title="Alterar tema"
+                    type="button"
+                >
+                    <img src="../imgs/mudar tema.svg" alt="Alterar tema">
+                </button>
+
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- CARRINHO -->
+    <main class="cart-page">
+
+        <section class="cart-header">
+
+            <span>DRAGON SUPLEMENTOS</span>
+
+            <h1>
+                SEU <strong>CARRINHO</strong>
+            </h1>
+
+            <p>
+                Confira os produtos adicionados ao seu carrinho.
+            </p>
+
+        </section>
+
+
+        <section class="cart-container">
+
+            <!-- PRODUTOS -->
+
+            <div class="cart-products">
+
+                <!--
+                    Os produtos serão carregados
+                    automaticamente pelo carrinho.js.
+                -->
+
+            </div>
+
+
+            <!-- RESUMO -->
+
+            <aside class="cart-summary">
+
+                <h2>RESUMO DO PEDIDO</h2>
+
+                <div class="summary-line">
+
+                    <span>Subtotal</span>
+
+                    <strong id="cartSubtotal">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+                <div class="summary-line">
+
+                    <span>Frete</span>
+
+                    <strong class="free-shipping">
+                        GRÁTIS
+                    </strong>
+
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="cartTotal">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+                <button
+                    class="checkout-button"
+                    id="finalizarCompra"
+                    type="button"
+                >
+                    FINALIZAR COMPRA
+                </button>
+
+                <a
+                    href="produtos.html"
+                    class="continue-shopping"
+                >
+                    CONTINUAR COMPRANDO
+                </a>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL DE FINALIZAÇÃO -->
+
+    <div
+        class="checkout-modal"
+        id="checkoutModal"
+    >
+
+        <div class="checkout-box">
+
+            <button
+                class="checkout-close"
+                id="fecharCheckout"
+                type="button"
+            >
+                ×
+            </button>
+
+            <span>DRAGON SUPLEMENTOS</span>
+
+            <h2>
+                FINALIZAR <strong>PEDIDO</strong>
+            </h2>
+
+            <p class="checkout-description">
+                Confira os dados antes de confirmar sua compra.
+            </p>
+
+
+            <!-- TOTAL -->
+
+            <div class="checkout-summary">
+
+                <span>
+                    Total da compra
+                </span>
+
+                <strong id="checkoutTotal">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <!-- ENDEREÇO -->
+
+            <div class="checkout-field">
+
+                <label for="enderecoEntrega">
+                    Endereço de entrega
+                </label>
+
+                <input
+                    type="text"
+                    id="enderecoEntrega"
+                    placeholder="Digite seu endereço"
+                >
+
+            </div>
+
+
+            <!-- PAGAMENTO -->
+
+            <div class="checkout-field">
+
+                <label for="formaPagamento">
+                    Forma de pagamento
+                </label>
+
+                <select id="formaPagamento">
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="pix">
+                        PIX
+                    </option>
+
+                    <option value="cartao">
+                        Cartão
+                    </option>
+
+                    <option value="boleto">
+                        Boleto
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- MENSAGEM DE ERRO -->
+
+            <p
+                class="checkout-error"
+                id="checkoutError"
+            ></p>
+
+
+            <!-- CONFIRMAR -->
+
+            <button
+                class="confirmar-compra"
+                id="confirmarCompra"
+                type="button"
+            >
+                CONFIRMAR PEDIDO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <div class="footer">
+
+            <p>
+                © 2026 Dragon Suplementos.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+    <script src="../js/carrinho.js"></script>
+
+</body>
+
+</html>
